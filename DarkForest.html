@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is Hiding in the dark forest?</title>
+        <link rel="stylesheet" href="game.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 style="text-align: center;">Dark Forest Adventure</h1>
+        <div style="display: block;" class="message-container">
+            <p>You find yourself at the edge of the Forbidden Forest, its depths
+                shrouded in darkness. Will you venture into its mysterious depths?</p>
+            <br />
+            <button onclick="showDivAndDisableButton('enterForest','')">Enter the
+                Forest</button>
+            <br /><br />
+        </div>
+        <div class="message-container" id="enterForest">
+            You take a deep breath and step into the forest. As you delve deeper, the trees seem to close in around you,
+            casting eerie shadows. Ahead, you see two paths diverging.
+            <br /> <br />
+            <button id="leftButton" onclick="showDivAndDisableButton('leftPath','rightButton');">Take the left
+                path</button>
+            <button id="rightButton" onclick="showDivAndDisableButton('rigthPath','leftButton')">Take the right
+                path</button>
+            <br /> <br />
+        </div>
+        <div class="message-container" id="leftPath">
+            You follow the left path, feeling a sense of unease grow with each step. Suddenly, you hear a rustling in
+            the bushes ahead. What will you do?
+            <br /> <br />
+            <button id="investigateLeftButton"
+                onclick="showDivAndDisableButton('investigateLeft','continuePathLeftButton')">Investigate</button>
+            <button id="continuePathLeftButton"
+                onclick="showDivAndDisableButton('continuePathLeft','investigateLeftButton')">Ignore it and
+                continue</button>
+            <br /> <br />
+        </div>
+        <div class="message-container" id="investigateLeft">
+            You cautiously approach the source of the rustling. To your relief, it's just a harmless creature scurrying
+            away. You continue on your way.
+            <br /> <br />
+            <button id="continuePathLeftButton2"
+                onclick="showDivAndDisableButton('continuePathLeft')">continuePath</button>
+            <br /> <br />
+        </div>
+        <div class="message-container" id="continuePathLeft">
+            You press on, the darkness seeming to swallow you whole. You can't shake the feeling of being watched, but
+            you push it aside.
+            <br /> <br />
+            <button id="encounterCreatureLeftButton"
+                onclick="showDivAndDisableButton('encounterCreatureLeft')">continue</button>
+            <br /> <br />
+        </div>
+        <div class="message-container" id="encounterCreatureLeft">
+            Suddenly, you come face to face with a creature lurking in the shadows. It snarls menacingly, its eyes
+            glinting in the darkness. What will you do? <br /> <br />
+            <button id="fightLeftButton" onclick="showDivAndDisableButton('fightLeft','fleeLeftButton')">Fight</button>
+            <button id="fleeLeftButton" onclick="showDivAndDisableButton('fleeLeft','fightLeftButton')">Flee</button>
+            <br /> <br />
+        </div>
+        <div class="message-container" id="fightLeft">
+            You raise your wand, ready to defend yourself. The creature lunges at you, and you engage in a fierce
+            battle. After a tense struggle, you emerge victorious. <br /> <br />
+            <button onclick="showDivAndDisableButton('finishAdventure','')">continue</button>
+            <br /> <br />
+        </div>
+        <div class="message-container" id="fleeLeft">
+            You turn and run, your heart pounding in your chest. The creature gives chase, but you manage to lose it in
+            the maze of trees. <br /> <br />
+            <button onclick="showDivAndDisableButton('finishAdventure','')">continue</button>
+            <br /> <br />
+        </div>
+        <div class="message-container" id="rigthPath">
+            <br />
+            You choose the right path, the darkness seems to deepen around you. You feel like you're being watched.
+            Suddenly, you stumble upon a clearing. What will you do?
+            <br /> <br />
+            <button id="exploreClearingRigthBtn"
+                onclick="showDivAndDisableButton('exploreClearingRigth','returnToPathRightBtn')">Explore the
+                clearing</button>
+            <button id="returnToPathRightBtn"
+                onclick="showDivAndDisableButton('continuePathRight','exploreClearingRigthBtn')">Return to the
+                path</button>
+            <br /> <br />
+        </div>
+        <div style="opacity: 100%;" class="message-container" id="exploreClearingRigth">
+            <br />
+            <img src="artifact.jpg" /><br />
+            You cautiously explore the clearing, your wand at the ready. To your surprise, you find a hidden cache of
+            magical artifacts. You decide to take them with you. <br /> <br />
+            <button onclick="showDivAndDisableButton('finishAdventure','')">continue</button>
+            <br /> <br />
+        </div>
+        <div class="message-container" id="continuePathRight">
+            <br />
+            You press on, the darkness seeming to swallow you whole. You can't shake the feeling of being watched, but
+            you push it aside. <br /> <br />
+            <button onclick="showDivAndDisableButton('encounterCreatureRight','')">continue</button>
+            <br /> <br />
+        </div>
+        <div class="message-container" id="encounterCreatureRight">
+            Suddenly, you come face to face with a creature lurking in the shadows. It snarls menacingly, its eyes
+            glinting in the darkness. What will you do? <br /> <br />
+            <button id="fightRightButton"
+                onclick="showDivAndDisableButton('fightRight','fleeRightButton')">Fight</button>
+            <button id="fleeRightButton" onclick="showDivAndDisableButton('fleeRight','fightRightButton')">Flee</button>
+            <br /> <br />
+        </div>
+        <div class="message-container" id="fightRight">
+            You raise your wand, ready to defend yourself. The creature lunges at you, and you engage in a fierce
+            battle. After a tense struggle, you emerge victorious. <br /> <br />
+            <button onclick="showDivAndDisableButton('finishAdventure','')">continue</button>
+            <br /> <br />
+        </div>
+        <div class="message-container" id="fleeRight">
+            You turn and run, your heart pounding in your chest. The creature gives chase, but you manage to lose it in
+            the maze of trees. <br /> <br />
+            <button onclick="showDivAndDisableButton('finishAdventure','')">continue</button>
+            <br /> <br />
+        </div>
+        <div style="opacity: 100%;" class="message-container" id="finishAdventure">
+            <br />
+            <img src="alive.jpg" /><br />
+            You emerge from the forest, shaken but alive. The adventure may be over, but the memory of your journey
+            through the Forbidden Forest will stay with you forever.
+            <br /> <br />
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="showDivAndDisableButton.js"></script>
+
+<script>
+    function showDivAndDisableButton(myDiv, btn) {
+        var x = document.getElementById(myDiv);
+        x.style.display = "block";
+        document.getElementById(btn).disabled = true;
+
+    }
+</script>

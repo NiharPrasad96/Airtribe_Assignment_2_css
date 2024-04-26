@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will you Escape Azkaban?</title>
+    <link rel="stylesheet" href="game.css">
+    <!-- Just added to check the priority of internal versus external css -->
+    <style>
+    .message-container {
+    background-color: skyblue;
+    opacity: 60%;
+    margin-bottom: 20px;
+    padding: 10px;
+    color: #000;
+    font-weight: bolder;
+    display: none;
+}
+    </style>
+</head>
+
+<body style="background-image: url('dementors.jpg');background-size: cover;">
+
+    <div class="container">
+        <h1 style="text-align: center;color: aqua;">Adventures Of Azkaban</h1>
+        <div style="display: block;" class="message-container">
+            <p>You wake up in your cold, dark cell in Azkaban, the notorious
+                wizarding prison guarded by Dementors. The memory of your wrongful imprisonment burns in your mind as
+                you realize there might be a chance to escape. Suddenly, you hear a faint voice coming from the
+                neighboring cell. It's Sirius Black, your old friend and fellow inmate.</p>
+            <br />
+            <button id="listenbtn" style="align-self: center;"
+                onclick="showDivAndDisableButton('listenToSirius','ignorebtn')"> Listen to Sirius's Plan</button>
+            <button id="ignorebtn" style="align-self: center;"
+                onclick="showDivAndDisableButton('ignore','listenbtn')">Ignore Sirius and Try to Escape Alone</button>
+
+            <br /><br />
+        </div>
+        <div class="message-container"  id="listenToSirius">
+            Sirius whispers his plan to you: "There's a secret passage hidden beneath the prison. We'll need to distract
+            the Dementors and find the entrance together. Are you with me?" <br /> <br />
+            <button id="agreeButton" onclick="showDivAndDisableButton('agree','declineButton');"> Agree and Follow
+                Sirius</button>
+            <button id="declineButton" onclick="showDivAndDisableButton('decline','agreeButton')">Decline and Search for
+                Another Way</button>
+            <br /> <br />
+        </div>
+        <div class="message-container"  id="agree">
+            With determination in your hearts, you and Sirius navigate the dark corridors of Azkaban, avoiding the
+            patrolling Dementors. You finally reach the hidden passage entrance. As you step into the narrow tunnel, you
+            can hear the sound of freedom beckoning you. <br /> <br />
+            <button onclick="showDivAndDisableButton('continueAgree')">Continue</button>
+            <br /> <br />
+        </div>
+        <div class="message-container"  id="continueAgree">
+            Congratulations! You successfully escaped from Azkaban with Sirius Black. You are now fugitives on the run,
+            but you're free. Your adventure continues as you evade capture and seek justice for your wrongful
+            imprisonment. <br /> <br />
+            <br /> <br />
+        </div>
+        <div class="message-container"  id="decline">
+            You ignore Sirius's plan and begin to search for an alternative escape route. Unfortunately, without
+            Sirius's guidance, you struggle to evade the Dementors and navigate the labyrinthine corridors of Azkaban.
+            Eventually, you're caught by the prison guards and thrown back into your cell. <br /> <br />
+            <br /> <br />
+        </div>
+        <div class="message-container"  id="ignore">
+            You ignore Sirius's voice and focus on finding your own way out of Azkaban. You carefully observe the
+            Dementors' patrol patterns and search for any weaknesses in the prison's defenses.
+            <br /> <br />
+            <button onclick="showDivAndDisableButton('continueAlone')">Continue</button>
+        </div>
+        <div class="message-container"  id="continueAlone">
+            Congratulations! With your quick thinking and resourcefulness, you manage to evade the Dementors and find a
+            hidden passage leading to freedom. You successfully escape from Azkaban and begin your journey to reclaim
+            your innocence. <br /> <br />
+        </div>
+
+
+
+
+    </div>
+</body>
+
+</html>
+<script src="showDivAndDisableButton.js"></script>
